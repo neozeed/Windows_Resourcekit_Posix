@@ -1,0 +1,56 @@
+ALPHA_OBJECTS= \
+$(_OBJ_DIR)\alpha\find.obj \
+$(_OBJ_DIR)\alpha\function.obj \
+$(_OBJ_DIR)\alpha\ls.obj \
+$(_OBJ_DIR)\alpha\main.obj \
+$(_OBJ_DIR)\alpha\misc.obj \
+$(_OBJ_DIR)\alpha\operator.obj \
+$(_OBJ_DIR)\alpha\option.obj \
+$(_OBJ_DIR)\alpha\fnmatch.obj \
+$(_OBJ_DIR)\alpha\findglob.obj \
+$(_OBJ_DIR)\alpha\glob.obj
+
+PASS0_ALPHA_OBJECTS=
+
+MIPS_OBJECTS= \
+$(_OBJ_DIR)\mips\find.obj \
+$(_OBJ_DIR)\mips\function.obj \
+$(_OBJ_DIR)\mips\ls.obj \
+$(_OBJ_DIR)\mips\main.obj \
+$(_OBJ_DIR)\mips\misc.obj \
+$(_OBJ_DIR)\mips\operator.obj \
+$(_OBJ_DIR)\mips\option.obj \
+$(_OBJ_DIR)\mips\fnmatch.obj \
+$(_OBJ_DIR)\mips\findglob.obj \
+$(_OBJ_DIR)\mips\glob.obj
+
+PASS0_MIPS_OBJECTS=
+
+386_OBJECTS= \
+$(_OBJ_DIR)\i386\find.obj \
+$(_OBJ_DIR)\i386\function.obj \
+$(_OBJ_DIR)\i386\ls.obj \
+$(_OBJ_DIR)\i386\main.obj \
+$(_OBJ_DIR)\i386\misc.obj \
+$(_OBJ_DIR)\i386\operator.obj \
+$(_OBJ_DIR)\i386\option.obj \
+$(_OBJ_DIR)\i386\fnmatch.obj \
+$(_OBJ_DIR)\i386\findglob.obj \
+$(_OBJ_DIR)\i386\glob.obj
+
+PASS0_386_OBJECTS=
+
+PPC_OBJECTS= \
+$(_OBJ_DIR)\ppc\find.obj \
+$(_OBJ_DIR)\ppc\function.obj \
+$(_OBJ_DIR)\ppc\ls.obj \
+$(_OBJ_DIR)\ppc\main.obj \
+$(_OBJ_DIR)\ppc\misc.obj \
+$(_OBJ_DIR)\ppc\operator.obj \
+$(_OBJ_DIR)\ppc\option.obj \
+$(_OBJ_DIR)\ppc\fnmatch.obj \
+$(_OBJ_DIR)\ppc\findglob.obj \
+$(_OBJ_DIR)\ppc\glob.obj
+
+PASS0_PPC_OBJECTS=
+

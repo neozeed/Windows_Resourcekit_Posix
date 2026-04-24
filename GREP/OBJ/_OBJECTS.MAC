@@ -1,0 +1,44 @@
+ALPHA_OBJECTS= \
+$(_OBJ_DIR)\alpha\egrep.obj \
+$(_OBJ_DIR)\alpha\regerror.obj \
+$(_OBJ_DIR)\alpha\regexp.obj \
+$(_OBJ_DIR)\alpha\regsub.obj \
+$(_OBJ_DIR)\alpha\getopt.obj \
+$(_OBJ_DIR)\alpha\glob.obj \
+$(_OBJ_DIR)\alpha\grep.obj
+
+PASS0_ALPHA_OBJECTS=
+
+MIPS_OBJECTS= \
+$(_OBJ_DIR)\mips\egrep.obj \
+$(_OBJ_DIR)\mips\regerror.obj \
+$(_OBJ_DIR)\mips\regexp.obj \
+$(_OBJ_DIR)\mips\regsub.obj \
+$(_OBJ_DIR)\mips\getopt.obj \
+$(_OBJ_DIR)\mips\glob.obj \
+$(_OBJ_DIR)\mips\grep.obj
+
+PASS0_MIPS_OBJECTS=
+
+386_OBJECTS= \
+$(_OBJ_DIR)\i386\egrep.obj \
+$(_OBJ_DIR)\i386\regerror.obj \
+$(_OBJ_DIR)\i386\regexp.obj \
+$(_OBJ_DIR)\i386\regsub.obj \
+$(_OBJ_DIR)\i386\getopt.obj \
+$(_OBJ_DIR)\i386\glob.obj \
+$(_OBJ_DIR)\i386\grep.obj
+
+PASS0_386_OBJECTS=
+
+PPC_OBJECTS= \
+$(_OBJ_DIR)\ppc\egrep.obj \
+$(_OBJ_DIR)\ppc\regerror.obj \
+$(_OBJ_DIR)\ppc\regexp.obj \
+$(_OBJ_DIR)\ppc\regsub.obj \
+$(_OBJ_DIR)\ppc\getopt.obj \
+$(_OBJ_DIR)\ppc\glob.obj \
+$(_OBJ_DIR)\ppc\grep.obj
+
+PASS0_PPC_OBJECTS=
+

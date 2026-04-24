@@ -1,0 +1,28 @@
+ALPHA_OBJECTS= \
+$(_OBJ_DIR)\alpha\cat.obj \
+$(_OBJ_DIR)\alpha\catglob.obj \
+$(_OBJ_DIR)\alpha\glob.obj
+
+PASS0_ALPHA_OBJECTS=
+
+MIPS_OBJECTS= \
+$(_OBJ_DIR)\mips\cat.obj \
+$(_OBJ_DIR)\mips\catglob.obj \
+$(_OBJ_DIR)\mips\glob.obj
+
+PASS0_MIPS_OBJECTS=
+
+386_OBJECTS= \
+$(_OBJ_DIR)\i386\cat.obj \
+$(_OBJ_DIR)\i386\catglob.obj \
+$(_OBJ_DIR)\i386\glob.obj
+
+PASS0_386_OBJECTS=
+
+PPC_OBJECTS= \
+$(_OBJ_DIR)\ppc\cat.obj \
+$(_OBJ_DIR)\ppc\catglob.obj \
+$(_OBJ_DIR)\ppc\glob.obj
+
+PASS0_PPC_OBJECTS=
+

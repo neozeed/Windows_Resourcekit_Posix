@@ -1,0 +1,120 @@
+ALPHA_OBJECTS= \
+$(_OBJ_DIR)\alpha\blk.obj \
+$(_OBJ_DIR)\alpha\cmd1.obj \
+$(_OBJ_DIR)\alpha\cmd2.obj \
+$(_OBJ_DIR)\alpha\curses.obj \
+$(_OBJ_DIR)\alpha\cut.obj \
+$(_OBJ_DIR)\alpha\ex.obj \
+$(_OBJ_DIR)\alpha\input.obj \
+$(_OBJ_DIR)\alpha\main.obj \
+$(_OBJ_DIR)\alpha\misc.obj \
+$(_OBJ_DIR)\alpha\modify.obj \
+$(_OBJ_DIR)\alpha\move1.obj \
+$(_OBJ_DIR)\alpha\move2.obj \
+$(_OBJ_DIR)\alpha\move3.obj \
+$(_OBJ_DIR)\alpha\move4.obj \
+$(_OBJ_DIR)\alpha\move5.obj \
+$(_OBJ_DIR)\alpha\opts.obj \
+$(_OBJ_DIR)\alpha\recycle.obj \
+$(_OBJ_DIR)\alpha\redraw.obj \
+$(_OBJ_DIR)\alpha\regexp.obj \
+$(_OBJ_DIR)\alpha\regsub.obj \
+$(_OBJ_DIR)\alpha\system.obj \
+$(_OBJ_DIR)\alpha\tio.obj \
+$(_OBJ_DIR)\alpha\tmp.obj \
+$(_OBJ_DIR)\alpha\vars.obj \
+$(_OBJ_DIR)\alpha\vcmd.obj \
+$(_OBJ_DIR)\alpha\vi.obj
+
+PASS0_ALPHA_OBJECTS=
+
+MIPS_OBJECTS= \
+$(_OBJ_DIR)\mips\blk.obj \
+$(_OBJ_DIR)\mips\cmd1.obj \
+$(_OBJ_DIR)\mips\cmd2.obj \
+$(_OBJ_DIR)\mips\curses.obj \
+$(_OBJ_DIR)\mips\cut.obj \
+$(_OBJ_DIR)\mips\ex.obj \
+$(_OBJ_DIR)\mips\input.obj \
+$(_OBJ_DIR)\mips\main.obj \
+$(_OBJ_DIR)\mips\misc.obj \
+$(_OBJ_DIR)\mips\modify.obj \
+$(_OBJ_DIR)\mips\move1.obj \
+$(_OBJ_DIR)\mips\move2.obj \
+$(_OBJ_DIR)\mips\move3.obj \
+$(_OBJ_DIR)\mips\move4.obj \
+$(_OBJ_DIR)\mips\move5.obj \
+$(_OBJ_DIR)\mips\opts.obj \
+$(_OBJ_DIR)\mips\recycle.obj \
+$(_OBJ_DIR)\mips\redraw.obj \
+$(_OBJ_DIR)\mips\regexp.obj \
+$(_OBJ_DIR)\mips\regsub.obj \
+$(_OBJ_DIR)\mips\system.obj \
+$(_OBJ_DIR)\mips\tio.obj \
+$(_OBJ_DIR)\mips\tmp.obj \
+$(_OBJ_DIR)\mips\vars.obj \
+$(_OBJ_DIR)\mips\vcmd.obj \
+$(_OBJ_DIR)\mips\vi.obj
+
+PASS0_MIPS_OBJECTS=
+
+386_OBJECTS= \
+$(_OBJ_DIR)\i386\blk.obj \
+$(_OBJ_DIR)\i386\cmd1.obj \
+$(_OBJ_DIR)\i386\cmd2.obj \
+$(_OBJ_DIR)\i386\curses.obj \
+$(_OBJ_DIR)\i386\cut.obj \
+$(_OBJ_DIR)\i386\ex.obj \
+$(_OBJ_DIR)\i386\input.obj \
+$(_OBJ_DIR)\i386\main.obj \
+$(_OBJ_DIR)\i386\misc.obj \
+$(_OBJ_DIR)\i386\modify.obj \
+$(_OBJ_DIR)\i386\move1.obj \
+$(_OBJ_DIR)\i386\move2.obj \
+$(_OBJ_DIR)\i386\move3.obj \
+$(_OBJ_DIR)\i386\move4.obj \
+$(_OBJ_DIR)\i386\move5.obj \
+$(_OBJ_DIR)\i386\opts.obj \
+$(_OBJ_DIR)\i386\recycle.obj \
+$(_OBJ_DIR)\i386\redraw.obj \
+$(_OBJ_DIR)\i386\regexp.obj \
+$(_OBJ_DIR)\i386\regsub.obj \
+$(_OBJ_DIR)\i386\system.obj \
+$(_OBJ_DIR)\i386\tio.obj \
+$(_OBJ_DIR)\i386\tmp.obj \
+$(_OBJ_DIR)\i386\vars.obj \
+$(_OBJ_DIR)\i386\vcmd.obj \
+$(_OBJ_DIR)\i386\vi.obj
+
+PASS0_386_OBJECTS=
+
+PPC_OBJECTS= \
+$(_OBJ_DIR)\ppc\blk.obj \
+$(_OBJ_DIR)\ppc\cmd1.obj \
+$(_OBJ_DIR)\ppc\cmd2.obj \
+$(_OBJ_DIR)\ppc\curses.obj \
+$(_OBJ_DIR)\ppc\cut.obj \
+$(_OBJ_DIR)\ppc\ex.obj \
+$(_OBJ_DIR)\ppc\input.obj \
+$(_OBJ_DIR)\ppc\main.obj \
+$(_OBJ_DIR)\ppc\misc.obj \
+$(_OBJ_DIR)\ppc\modify.obj \
+$(_OBJ_DIR)\ppc\move1.obj \
+$(_OBJ_DIR)\ppc\move2.obj \
+$(_OBJ_DIR)\ppc\move3.obj \
+$(_OBJ_DIR)\ppc\move4.obj \
+$(_OBJ_DIR)\ppc\move5.obj \
+$(_OBJ_DIR)\ppc\opts.obj \
+$(_OBJ_DIR)\ppc\recycle.obj \
+$(_OBJ_DIR)\ppc\redraw.obj \
+$(_OBJ_DIR)\ppc\regexp.obj \
+$(_OBJ_DIR)\ppc\regsub.obj \
+$(_OBJ_DIR)\ppc\system.obj \
+$(_OBJ_DIR)\ppc\tio.obj \
+$(_OBJ_DIR)\ppc\tmp.obj \
+$(_OBJ_DIR)\ppc\vars.obj \
+$(_OBJ_DIR)\ppc\vcmd.obj \
+$(_OBJ_DIR)\ppc\vi.obj
+
+PASS0_PPC_OBJECTS=
+

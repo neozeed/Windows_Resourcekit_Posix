@@ -1,0 +1,28 @@
+ALPHA_OBJECTS= \
+$(_OBJ_DIR)\alpha\termcap.obj \
+$(_OBJ_DIR)\alpha\tgoto.obj \
+$(_OBJ_DIR)\alpha\tputs.obj
+
+PASS0_ALPHA_OBJECTS=
+
+MIPS_OBJECTS= \
+$(_OBJ_DIR)\mips\termcap.obj \
+$(_OBJ_DIR)\mips\tgoto.obj \
+$(_OBJ_DIR)\mips\tputs.obj
+
+PASS0_MIPS_OBJECTS=
+
+386_OBJECTS= \
+$(_OBJ_DIR)\i386\termcap.obj \
+$(_OBJ_DIR)\i386\tgoto.obj \
+$(_OBJ_DIR)\i386\tputs.obj
+
+PASS0_386_OBJECTS=
+
+PPC_OBJECTS= \
+$(_OBJ_DIR)\ppc\termcap.obj \
+$(_OBJ_DIR)\ppc\tgoto.obj \
+$(_OBJ_DIR)\ppc\tputs.obj
+
+PASS0_PPC_OBJECTS=
+

@@ -1,0 +1,24 @@
+dirs=	ar	\
+	bsdpsx 	\
+	cat	\
+	cc	\
+	chmod	\
+	chown	\
+	cp	\
+	devsrv	\
+	elvis	\
+	find	\
+	grep	\
+	ld	\
+	ln	\
+	ls	\
+	make	\
+	man 	\
+	mkdir	\
+	mv	\
+	rm	\
+	rmdir	\
+	sh	\
+	term	\
+	touch	\
+	wc	

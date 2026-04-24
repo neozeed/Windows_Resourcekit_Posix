@@ -1,0 +1,40 @@
+ALPHA_OBJECTS= \
+$(_OBJ_DIR)\alpha\ls.obj \
+$(_OBJ_DIR)\alpha\print.obj \
+$(_OBJ_DIR)\alpha\cmp.obj \
+$(_OBJ_DIR)\alpha\util.obj \
+$(_OBJ_DIR)\alpha\lsglob.obj \
+$(_OBJ_DIR)\alpha\glob.obj
+
+PASS0_ALPHA_OBJECTS=
+
+MIPS_OBJECTS= \
+$(_OBJ_DIR)\mips\ls.obj \
+$(_OBJ_DIR)\mips\print.obj \
+$(_OBJ_DIR)\mips\cmp.obj \
+$(_OBJ_DIR)\mips\util.obj \
+$(_OBJ_DIR)\mips\lsglob.obj \
+$(_OBJ_DIR)\mips\glob.obj
+
+PASS0_MIPS_OBJECTS=
+
+386_OBJECTS= \
+$(_OBJ_DIR)\i386\ls.obj \
+$(_OBJ_DIR)\i386\print.obj \
+$(_OBJ_DIR)\i386\cmp.obj \
+$(_OBJ_DIR)\i386\util.obj \
+$(_OBJ_DIR)\i386\lsglob.obj \
+$(_OBJ_DIR)\i386\glob.obj
+
+PASS0_386_OBJECTS=
+
+PPC_OBJECTS= \
+$(_OBJ_DIR)\ppc\ls.obj \
+$(_OBJ_DIR)\ppc\print.obj \
+$(_OBJ_DIR)\ppc\cmp.obj \
+$(_OBJ_DIR)\ppc\util.obj \
+$(_OBJ_DIR)\ppc\lsglob.obj \
+$(_OBJ_DIR)\ppc\glob.obj
+
+PASS0_PPC_OBJECTS=
+

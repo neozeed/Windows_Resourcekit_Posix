@@ -1,0 +1,92 @@
+ALPHA_OBJECTS= \
+$(_OBJ_DIR)\alpha\arch.obj \
+$(_OBJ_DIR)\alpha\buf.obj \
+$(_OBJ_DIR)\alpha\compat.obj \
+$(_OBJ_DIR)\alpha\cond.obj \
+$(_OBJ_DIR)\alpha\df_mi.obj \
+$(_OBJ_DIR)\alpha\dir.obj \
+$(_OBJ_DIR)\alpha\emalloc.obj \
+$(_OBJ_DIR)\alpha\ffs.obj \
+$(_OBJ_DIR)\alpha\hash.obj \
+$(_OBJ_DIR)\alpha\job.obj \
+$(_OBJ_DIR)\alpha\main.obj \
+$(_OBJ_DIR)\alpha\make.obj \
+$(_OBJ_DIR)\alpha\parse.obj \
+$(_OBJ_DIR)\alpha\putenv.obj \
+$(_OBJ_DIR)\alpha\str.obj \
+$(_OBJ_DIR)\alpha\stubs.obj \
+$(_OBJ_DIR)\alpha\suff.obj \
+$(_OBJ_DIR)\alpha\targ.obj \
+$(_OBJ_DIR)\alpha\var.obj
+
+PASS0_ALPHA_OBJECTS=
+
+MIPS_OBJECTS= \
+$(_OBJ_DIR)\mips\arch.obj \
+$(_OBJ_DIR)\mips\buf.obj \
+$(_OBJ_DIR)\mips\compat.obj \
+$(_OBJ_DIR)\mips\cond.obj \
+$(_OBJ_DIR)\mips\df_mi.obj \
+$(_OBJ_DIR)\mips\dir.obj \
+$(_OBJ_DIR)\mips\emalloc.obj \
+$(_OBJ_DIR)\mips\ffs.obj \
+$(_OBJ_DIR)\mips\hash.obj \
+$(_OBJ_DIR)\mips\job.obj \
+$(_OBJ_DIR)\mips\main.obj \
+$(_OBJ_DIR)\mips\make.obj \
+$(_OBJ_DIR)\mips\parse.obj \
+$(_OBJ_DIR)\mips\putenv.obj \
+$(_OBJ_DIR)\mips\str.obj \
+$(_OBJ_DIR)\mips\stubs.obj \
+$(_OBJ_DIR)\mips\suff.obj \
+$(_OBJ_DIR)\mips\targ.obj \
+$(_OBJ_DIR)\mips\var.obj
+
+PASS0_MIPS_OBJECTS=
+
+386_OBJECTS= \
+$(_OBJ_DIR)\i386\arch.obj \
+$(_OBJ_DIR)\i386\buf.obj \
+$(_OBJ_DIR)\i386\compat.obj \
+$(_OBJ_DIR)\i386\cond.obj \
+$(_OBJ_DIR)\i386\df_mi.obj \
+$(_OBJ_DIR)\i386\dir.obj \
+$(_OBJ_DIR)\i386\emalloc.obj \
+$(_OBJ_DIR)\i386\ffs.obj \
+$(_OBJ_DIR)\i386\hash.obj \
+$(_OBJ_DIR)\i386\job.obj \
+$(_OBJ_DIR)\i386\main.obj \
+$(_OBJ_DIR)\i386\make.obj \
+$(_OBJ_DIR)\i386\parse.obj \
+$(_OBJ_DIR)\i386\putenv.obj \
+$(_OBJ_DIR)\i386\str.obj \
+$(_OBJ_DIR)\i386\stubs.obj \
+$(_OBJ_DIR)\i386\suff.obj \
+$(_OBJ_DIR)\i386\targ.obj \
+$(_OBJ_DIR)\i386\var.obj
+
+PASS0_386_OBJECTS=
+
+PPC_OBJECTS= \
+$(_OBJ_DIR)\ppc\arch.obj \
+$(_OBJ_DIR)\ppc\buf.obj \
+$(_OBJ_DIR)\ppc\compat.obj \
+$(_OBJ_DIR)\ppc\cond.obj \
+$(_OBJ_DIR)\ppc\df_mi.obj \
+$(_OBJ_DIR)\ppc\dir.obj \
+$(_OBJ_DIR)\ppc\emalloc.obj \
+$(_OBJ_DIR)\ppc\ffs.obj \
+$(_OBJ_DIR)\ppc\hash.obj \
+$(_OBJ_DIR)\ppc\job.obj \
+$(_OBJ_DIR)\ppc\main.obj \
+$(_OBJ_DIR)\ppc\make.obj \
+$(_OBJ_DIR)\ppc\parse.obj \
+$(_OBJ_DIR)\ppc\putenv.obj \
+$(_OBJ_DIR)\ppc\str.obj \
+$(_OBJ_DIR)\ppc\stubs.obj \
+$(_OBJ_DIR)\ppc\suff.obj \
+$(_OBJ_DIR)\ppc\targ.obj \
+$(_OBJ_DIR)\ppc\var.obj
+
+PASS0_PPC_OBJECTS=
+

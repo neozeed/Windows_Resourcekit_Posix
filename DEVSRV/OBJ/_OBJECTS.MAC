@@ -1,0 +1,24 @@
+ALPHA_OBJECTS= \
+$(_OBJ_DIR)\alpha\devsrv.obj \
+$(_OBJ_DIR)\alpha\for2bak.obj
+
+PASS0_ALPHA_OBJECTS=
+
+MIPS_OBJECTS= \
+$(_OBJ_DIR)\mips\devsrv.obj \
+$(_OBJ_DIR)\mips\for2bak.obj
+
+PASS0_MIPS_OBJECTS=
+
+386_OBJECTS= \
+$(_OBJ_DIR)\i386\devsrv.obj \
+$(_OBJ_DIR)\i386\for2bak.obj
+
+PASS0_386_OBJECTS=
+
+PPC_OBJECTS= \
+$(_OBJ_DIR)\ppc\devsrv.obj \
+$(_OBJ_DIR)\ppc\for2bak.obj
+
+PASS0_PPC_OBJECTS=
+
