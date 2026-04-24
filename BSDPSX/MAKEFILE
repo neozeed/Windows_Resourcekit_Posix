@@ -47,11 +47,11 @@ telldir.obj: telldir.c
 
 utimes.obj: utimes.c
 
-vfork.obj: vfork.c	
+vfork.obj: vfork.c      
 
 
 bsdpsx.lib: bcopy.obj bzero.obj for2bak.obj fts.obj getenv.obj getopt.obj getwd.obj index.obj lstat.obj mknod.obj putenv.obj pwcache.obj rindex.obj scandir.obj  seekdir.obj setenv.obj setmode.obj snprintf.obj strmode.obj telldir.obj utimes.obj vfork.obj
-	lib32 -DEBUGTYPE:BOTH -MACHINE:$(CPU) -SUBSYSTEM:posix -OUT:$*.lib $** 
+	lib -DEBUGTYPE:BOTH -MACHINE:$(CPU) -SUBSYSTEM:posix -OUT:$*.lib $** 
 
 .c.obj:
 	$(cc) $(cflags) $(psxvars) $(cvars) $(cdebug) $(C_DEFINES) $(C_INCLUDES) $*.c

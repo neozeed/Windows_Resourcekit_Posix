@@ -1,0 +1,66 @@
+                                                           RM (1)
+
+NAME
+
+  rm - Remove directory entries.
+
+SYNOPSIS
+
+  rm [ f ] [ dRr ] file ...
+DESCRIPTION
+
+  The rm utility attempts to remove the non-directory type  files
+specified on the command line.  If the permissions of the file do
+not permit writing, and the standard input device is a  terminal,
+the user is prompted (on the standard error output) for confirma-
+tion.
+  The options are as follows:
+     d - Attempt to remove directories as well as other types  of
+     files.
+     f - Attempt to remove the files without prompting  for  con-
+     firmation,  regardless  of  the  file's permissions.  If the
+     file does not exist, do not display a diagnostic message  or
+     modify  the  exit  status  to  reflect an error.  The option
+     overrides any previous options.
+     i - Request confirmation before attempting  to  remove  each
+     file,  regardless  of  the file's permissions, or whether or
+     not the standard input device is  a  terminal.   The  option
+     overrides any previous options.
+     R - Attempt to remove the file hierarchy rooted in each file
+     argument.   The option implies the option.  If the option is
+     specified, the user is prompted for confirmation before each
+     directory's  contents  are  processed (as well as before the
+     attempt is made to remove the directory).  If the user  does
+     not respond affirmatively, the file hierarchy rooted in that
+     directory is skipped.
+       r - Equivalent to
+  The rm utility removes symbolic links, not the files referenced
+by the links.
+  It is an error to attempt to remove the files ``.'' and ``..''.
+  The rm utility exits 0 if  all  of  the  named  files  or  file
+hierarchies  were removed, or if the option was specified and all
+of the existing files or file hierarchies were  removed.   If  an
+error occurs, rm exits with a value >0.
+SEE ALSO
+
+  rmdir (1) , unlink (2) , fts (3)
+COMPATIBILITY
+
+  The rm utility differs from historical implementations in  that
+the  option  only masks attempts to remove non-existent files in-
+stead of masking a large variety of errors.
+  Also, historical implementations prompted on the standard  out-
+put, not the standard error output.
+STANDARDS
+
+  The rm command is expected to be compatible.
+
+
+
+
+
+
+
+
+
+

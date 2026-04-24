@@ -1,0 +1,66 @@
+                                                           MV (1)
+
+NAME
+
+  mv - move files
+
+SYNOPSIS
+
+  mv [ f ] source target mv [ f ] source ... source
+DESCRIPTION
+
+  In its first form, the mv utility renames the file named by the
+source  operand  to  the  destination  path  named  by the target
+operand.  This form is assumed when the  last  operand  does  not
+name an already existing directory.
+  In its second form, mv  moves  each  file  named  by  a  source
+operand  to a destination file in the existing directory named by
+the directory operand.  The destination path for each operand  is
+the pathname produced by the concatenation of the last operand, a
+slash, and the final pathname component of the named file.
+  The following options are available:
+     f - Do not prompt for confirmation  before  overwriting  the
+     destination  path.   (The option is ignored if the option is
+     specified.)
+     i - Causes mv to write a prompt  to  standard  error  before
+     moving a file that would overwrite an existing file.  If the
+     response from the standard input begins with  the  character
+     ``y'', the move is attempted.
+  It is an error for either the source operand or the destination
+path to specify a directory unless both do.
+  If the destination path does not  have  a  mode  which  permits
+writing,  mv  prompts  the user for confirmation as specified for
+the option.
+  As the rename (2) call does not work across  file  systems,  mv
+uses  cp  (1)  and  rm (1) to accomplish the move.  The effect is
+equivalent to: rm -f destination_path &&  \  cp  -pr  source_file
+destination && \ rm -rf source_file
+  The mv utility exits 0 on success, and >0 if an error occurs.
+SEE ALSO
+
+  cp (1)
+STANDARDS
+
+  The mv utility is expected to be compatible.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,7 +17,8 @@ catglob.obj: catglob.c *.h
 glob.obj: glob.c *.h
 
 cat.exe: cat.obj catglob.obj glob.obj ..\bsdpsx\bsdpsx.lib
-	$(link) $(linkdebug) $(psxflags) -out:$*.exe $** $(psxlibs) ..\bsdpsx\bsdpsx.lib
+	-$(link) $(linkdebug) $(psxflags) -out:$*.exe $** $(psxlibs) ..\bsdpsx\bsdpsx.lib
+	-$(link) /NODEFAULTLIB $(linkdebug:oldnames.lib=) $(psxflags:oldnames.lib=) -out:$*.exe $** $(psxlibs:oldnames.lib=) ..\bsdpsx\bsdpsx.lib
 
 .c.obj:
 	$(cc) $(cflags) $(psxvars) $(cvars) $(cdebug) $(C_DEFINES) $(C_INCLUDES) $*.c

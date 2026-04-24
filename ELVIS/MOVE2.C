@@ -162,7 +162,7 @@ MARK	m_bsrch(m, ptrn)
 	int	wrapped;/* boolean: has our search wrapped yet? */
 	int	pos;	/* last acceptable idx for a match on this line */
 	int	last;	/* remembered idx of the last acceptable match on this line */
-	int	try;	/* an idx at which we strat searching for another match */
+	int	tryit;	/* an idx at which we strat searching for another match */
 
 	/* remember: "previous search was not forward" */
 	prevsf = FALSE;
@@ -219,9 +219,9 @@ MARK	m_bsrch(m, ptrn)
 			do
 			{
 				last = (int)(re->startp[0] - line);
-				try = (int)(re->endp[0] - line);
-			} while (try > 0
-				 && regexec(re, &line[try], FALSE)
+				tryit = (int)(re->endp[0] - line);
+			} while (tryit > 0
+				 && regexec(re, &line[tryit], FALSE)
 				 && (int)(re->startp[0] - line) < pos);
 
 			if (wrapped && *o_warn)

@@ -1,0 +1,66 @@
+                                                           WC (1)
+
+NAME
+
+  wc - Word, line, and byte count.
+
+SYNOPSIS
+
+  wc [ clw ] [ file ]
+DESCRIPTION
+
+  The wc utility reads one or more input text files, and, by  de-
+fault,  writes the number of lines, words, and bytes contained in
+each input file to the standard output.  If more than  one  input
+file  is  specified,  a line of cumulative count(s) for all named
+files is output on a separate line following the last file count.
+Wc considers a word to be a maximal string of characters delimit-
+ed by white space.
+  The following options are available:
+     c - The number of bytes in each input file is written to the
+     standard output.
+     l - The number of lines in each input file is written to the
+     standard output.
+     w - The number of words in each input file is written to the
+     standard output.
+  When an option is specified, wc only  reports  the  information
+requested by that option. The default action is equivalent to all
+the flags having been specified.
+  The following operands are available:
+     file - A pathname of an input file.
+  If no file names are specified, the standard input is used  and
+a  file  name  is not output. The resulting output is one line of
+the requested count(s) with the cumulative sum of all files  read
+in via standard input.
+  By default, the standard output contains a line for each  input
+file of the form: lines    words  bytes   file_name
+  The counts for lines, words and bytes are integers separated by
+spaces.   The  ordering  of  the  display of the number of lines,
+words, and/or bytes is the order in which the options were speci-
+fied.
+  The wc utility exits 0 on success, and >0 if an error occurs.
+STANDARDS
+
+  The wc function conforms to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

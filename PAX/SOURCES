@@ -1,0 +1,29 @@
+386_FLAGS=/J
+386_STDCALL=0
+386_WARNING_LEVEL=/W4
+
+WIMPYMASM=1
+
+MAJORCOMP=posix
+MINORCOMP=client
+
+TARGETNAME=pax
+TARGETPATH=obj
+TARGETTYPE=PROGRAM
+
+INCLUDES=C:\nt\public\sdk\inc\posix;C:\nt\public\sdk\inc
+
+SOURCES=append.c buffer.c cpio.c create.c extract.c fileio.c getopt.c link.c \
+	list.c mem.c namelist.c names.c pass.c pathname.c pax.c port.c \
+	regexp.c replace.c tar.c ttyio.c warn.c wildmat.c \
+	xn.c glob.c globbing.c
+
+C_DEFINES=-DWIN_NT -DSTDC_HEADERS -D_POSIX_SOURCE -DDIRENT -DSTACK_DIRECTION=-1 -DMSS -D__STDC__ -D_POSIX_ -Dmajor \
+	-DCONVERT_TO_SLASHES -UCONVERT_TO_BACKSLASHES
+
+UMTYPE=posix
+UMAPPL=pax
+REM_UMLIBS=obj\*\pax.lib
+
+OPTIONAL_UMTEST=
+UMBASE=0xA00000

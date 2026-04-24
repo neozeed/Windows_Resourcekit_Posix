@@ -1,0 +1,66 @@
+                                                          CAT (1)
+
+NAME
+
+  cat - concatenate and print files
+
+SYNOPSIS
+
+  cat [ benstuv ] [  ] [  ]
+DESCRIPTION
+
+  The cat utility reads files sequentially, writing them  to  the
+standard output.  The file operands are processed in command line
+order.  A single dash represents standard input.
+  The options are as follows:
+     b - Implies the option but doesn't number blank lines.
+     e - Implies the option, and displays a dollar  sign  at  the
+     end of each line as well.
+     n - Number the output lines, starting at 1.
+     s - Squeeze multiple adjacent empty lines, causing the  out-
+     put to be single spaced.
+     t - Implies the option, and displays tab  characters  as  as
+     well.
+     u - The option guarantees that the output is unbuffered.
+     v - Displays non-printing characters so  they  are  visible.
+     Control characters print line [^X] for control-X; the delete
+     character (octal 0177) prints as [^?]  Non-ascii  characters
+     (with  the high bit set) are printed as [M-] (for meta) fol-
+     lowed by the character for the low 7 bits.
+  The cat utility exits 0 on success, and >0 if an error occurs.
+BUGS
+
+  Because of the shell language mechanism used to perform  output
+redirection, the command will cause the original data in file1 to
+be destroyed!
+SEE ALSO
+
+  head (1) , more (1) , pr (1) , tail (1)
+HISTORY
+
+  A
+
+command appeared in Version 6 AT&T UNIX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

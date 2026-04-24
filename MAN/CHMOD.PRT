@@ -1,0 +1,132 @@
+                                                        CHMOD (1)
+
+NAME
+
+  chmod - change file modes
+
+SYNOPSIS
+
+  chmod [ R ] mode file ...
+DESCRIPTION
+
+  The chmod utility modifies the file mode  bits  of  the  listed
+files as specified by the mode operand.
+  The options are as follows:
+     R - Traverse a file hierarchy.  For each  file  that  is  of
+     type  directory,  chmod changes the mode of all files in the
+     file hierarchy below it followed by the mode of the directo-
+     ry itself.
+  Symbolic links are not indirected through, nor are their  modes
+altered.
+  Only the owner of a file or  the  super-user  is  permitted  to
+change the mode of a file.
+  The chmod utility exits 0 on success, and >0 if  an  error  oc-
+curs.
+MODES
+
+  Modes may be absolute or symbolic.  An absolute mode is an  oc-
+tal number constructed by or Ap ing the following values:
+     4000 - set-user-ID-on-execution
+     2000 - set-group-ID-on-execution
+     1000 - sticky bit, see chmod(2)
+     0400 - read by owner
+     0200 - write by owner
+     0100 - execute (or search for directories) by owner
+     0070 - read, write, execute/search by group
+     0007 - read, write, execute/search by others
+  The read, write, and execute/search values for group and others
+are encoded as described for owner.
+  The symbolic mode is described by the following  grammar:  mode
+::= clause [, clause ...] clause       ::= [who ...] [action ...]
+last_action action       ::= op [perm ...]  last_action   ::=  op
+[perm  ...] who          ::= a | u | g | o op           ::= + | -
+| = perm         ::= r | s | t | w | X | x | u | g | o
+  The who symbols ``u'',  ``g'',  and  ``o''  specify  the  user,
+group,  and  other parts of the mode bits, respectively.  The who
+symbol ``a'' is equivalent to ``ugo''.
+  The perm symbols represent the portions of  the  mode  bits  as
+follows:
+      - The read bits.
+      -   The   set-user-ID-on-execution   and   set-group-ID-on-
+     execution bits.
+      - The sticky bit.
+      - The write bits.
+      - The execute/search bits.
+      - The execute/search bits if the file is a directory or any
+     of  the execute/search bits are set in the original (unmodi-
+     fied) mode.  Operations with the perm symbol ``X'' are  only
+     meaningful  in  conjunction with the op symbol ``+'', and it
+     is ignored in all other cases.
+  The op symbols represent the operation performed, as follows:
+      - If no value is supplied for perm ,  the  ``+''  operation
+     has  no effect.  If no value is supplied for who , each per-
+     mission bit specified in perm , for which the  corresponding
+     bit in the file mode creation mask is clear, is set.  Other-
+     wise, the mode bits represented by  the  specified  who  and
+     perm values are set.
+      - If no value is supplied for perm ,  the  ``-''  operation
+     has  no  effect.  If no value is supplied for who , the mode
+     bits represented by perm are cleared for  the  owner,  group
+     and other permissions.  Otherwise, the mode bits represented
+     by the specified who and perm values are cleared.
+      - The mode bits specified by the who value are cleared, or,
+     if  no  who  value  is specified, the owner, group and other
+     mode bits are cleared.  Then, if no value  is  supplied  for
+     who  , each permission bit specified in perm , for which the
+     corresponding bit in the file mode creation mask  is  clear,
+     is  set.  Otherwise, the mode bits represented by the speci-
+     fied who and perm values are set.
+  Each clause specifies one or more operations to be performed on
+the  mode bits, and each operation is applied to the mode bits in
+the order specified.
+  Operations upon the other permissions only  (specified  by  the
+symbol  ``o''  by  itself),  in combination with the perm symbols
+``s'' or ``t'', are ignored.
+EXAMPLES
+
+     644 - make a file readable by anyone  and  writable  by  the
+     owner only.
+       go-w - deny write permission to group and others.
+       =rw,+X - set the read and write permissions to  the  usual
+     defaults,  but  retain  any  execute  permissions  that  are
+     currently set.
+       +X - make a directory  or  file  searchable/executable  by
+     everyone if it is already searchable/executable by anyone.
+       755 -
+     u=rwx,go=rx -
+     u=rwx,go=u-w - make a file readable/executable  by  everyone
+     and writeable by the owner only.
+       go= - clear all mode bits for group and others.
+       g=u-w - set the group bits equal to  the  user  bits,  but
+     clear the group write bit.
+BUGS
+
+  There's no perm option for the naughty bits.
+SEE ALSO
+
+  install (1) , chmod (2) , stat (2) , umask (2) , fts (3) , set-
+mode (3) , chown (8)
+STANDARDS
+
+  The chmod utility is expected to be compatible with the  excep-
+tion of the perm symbols and which are not included in that stan-
+dard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

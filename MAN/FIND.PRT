@@ -1,0 +1,264 @@
+                                                         FIND (1)
+
+NAME
+
+  find - walk a file hierarchy
+
+SYNOPSIS
+
+  find [ dsXx ] [ f ] [ file ] expression
+DESCRIPTION
+
+  Find recursively descends the  directory  tree  for  each  file
+listed,  evaluating  an expression (composed of the ``primaries''
+and ``operands'' listed below) in terms of each file in the tree.
+  If file is a symbolic link referencing an  existing  file,  the
+directory tree referenced by the link is descended instead of the
+link itself.
+  The options are as follows:
+     d - The option causes find to perform a depth-first  traver-
+     sal,  i.e. directories are visited in post-order and all en-
+     tries in a directory will be acted on before  the  directory
+     itself.   By  default, find visits directories in pre-order,
+     i.e. before their contents.  Note,  the  default  is  not  a
+     breadth-first traversal.
+     f - The option  specifies  a  file  hierarchy  for  find  to
+     traverse.   File  hierarchies  may  also be specified as the
+     operands immediately following the options.
+     s - The option causes the file  information  and  file  type
+     (see  stat (2) ) returned for each symbolic link to be those
+     of the file referenced by the link, not the link itself.  If
+     the referenced file does not exist, the file information and
+     type will be for the link itself.
+     X - The option is a modification to permit
+
+     to be safely used in conjunction with xargs (1) .  If a file
+     name contains any of the delimiting characters used by xargs
+     (,) a diagnostic message is displayed on standard error, and
+     the file is skipped.  The delimiting characters include sin-
+     gle (`` '  '')  and  double  (``  "  '')  quotes,  backslash
+     (``\''), space, tab and newline characters.
+     x - The option prevents find  from  descending  into  direc-
+     tories  that have a device number different than that of the
+     file from which the descent began.
+PRIMARIES
+
+     -atime - True if the difference between the file last access
+     time  and  the time find was started, rounded up to the next
+     full 24-hour period, is n 24-hour periods.
+     -ctime - True if the difference between  the  time  of  last
+     change  of  file  status  information  and the time find was
+     started, rounded up to the next full 24-hour  period,  is  n
+     24-hour periods.
+     -exec - True if the program named  utility  returns  a  zero
+     value  as its exit status.  Optional arguments may be passed
+     to the utility.  The expression  must  be  terminated  by  a
+     semicolon (``;'').  If the string ``{}'' appears anywhere in
+     the utility name or the arguments  it  is  replaced  by  the
+     pathname of the current file.  Utility will be executed from
+     the directory from which find was executed.
+     -fstype - True if the file is contained in a file system  of
+     type   type  .  Currently  supported  types  are  ``local'',
+     ``mfs'', ``nfs'', ``pc'', ``rdonly'' and ``ufs''.  The types
+     ``local'' and ``rdonly'' are not specific file system types.
+     The former matches any file system physically mounted on the
+     system  where  the  find  is  being  executed and the latter
+     matches any file system which is mounted read-only.
+     -group - True if the file belongs to the group  gname  .  If
+     gname is numeric and there is no such group name, then gname
+     is treated as a group id.
+     -inum - True if the file has inode number n .
+     -links - True if the file has n links.
+     -ls - This primary always evaluates to true.  The  following
+     information for the current file is written to standard out-
+     put: its inode number, size in 512-byte blocks, file permis-
+     sions,  number  of  hard links, owner, group, size in bytes,
+     last modification time, and pathname.   If  the  file  is  a
+     block or character special file, the major and minor numbers
+     will be displayed instead of the size in bytes.  If the file
+     is  a symbolic link, the pathname of the linked-to file will
+     be displayed preceded by ``->''.  The format is identical to
+     that produced by ``ls -dgils''.
+     -mtime - True if the difference between the file last modif-
+     ication  time  and  the time find was started, rounded up to
+     the next full 24-hour period, is n 24-hour periods.
+     -ok - The primary is identical to the primary with  the  ex-
+     ception  that  find requests user affirmation for the execu-
+     tion of the utility by printing a message  to  the  terminal
+     and reading a response.  If the response is other than ``y''
+     the command is not executed and the value of the ok  expres-
+     sion is false.
+     -name - True if the last component of the pathname being ex-
+     amined  matches  pattern  .  Special  shell pattern matching
+     characters (``['', ``]'', ``*'', and ``?'') may be  used  as
+     part of pattern . These characters may be matched explicitly
+     by escaping them with a backslash (``\'').
+     -newer - True if the current file has  a  more  recent  last
+     modification time than file .
+     -nouser - True if the file belongs to an unknown user.
+     -nogroup - True if the file belongs to an unknown group.
+     -path - True if the pathname being examined matches  pattern
+     .  Special  shell pattern matching characters (``['', ``]'',
+     ``*'', and ``?'') may be used as part  of  pattern  .  These
+     characters may be matched explicitly by escaping them with a
+     backslash (``\'').  Slashes (``/'') are  treated  as  normal
+     characters and do not have to be matched explicitly.
+     -perm - The mode may be either symbolic (see chmod (1) )  or
+     an  octal number.  If the mode is symbolic, a starting value
+     of zero is assumed and the mode sets or  clears  permissions
+     without  regard to the process' file mode creation mask.  If
+     the mode is octal, only bits 07777 | | | | | of  the  file's
+     mode  bits  participate  in  the comparison.  If the mode is
+     preceded by a dash (``-''), this primary evaluates  to  true
+     if  at  least  all  of  the  bits in the mode are set in the
+     file's mode bits.  If the mode is not preceded  by  a  dash,
+     this  primary  evaluates to true if the bits in the mode ex-
+     actly match the file's mode bits.  Note, the first character
+     of a symbolic mode may not be a dash (``-'').
+     -print - This primary always evaluates to true.   It  prints
+     the  pathname  of  the current file to standard output.  The
+     expression is appended to the user specified  expression  if
+     neither or is specified.
+     -prune - This primary always evaluates to true.   It  causes
+     find  to  not descend into the current file.  Note, the pri-
+     mary has no effect if the option was specified.
+     -size - True if the file's size,  rounded  up,  in  512-byte
+     blocks  is n . If n is followed by a ``c'', then the primary
+     is true if the file's size is n bytes.
+     -type - True if the file is of the specified type.  Possible
+     file types are as follows:
+          b - block special
+          c - character special
+          d - directory
+          f - regular file
+          l - symbolic link
+          p - FIFO
+          s - socket
+       -user - True if the file belongs to the user  uname  .  If
+     uname  is numeric and there is no such user name, then uname
+     is treated as a user id.
+  All primaries which take a numeric argument allow the number to
+be  preceded  by  a plus sign (``+'') or a minus sign (``-'').  A
+preceding plus sign means ``more than n'', a preceding minus sign
+means ``less than n'' and neither means ``exactly n'' .
+OPERATORS
+
+  The primaries may be combined using  the  following  operators.
+The operators are listed in order of decreasing precedence.
+     ( - This evaluates to true if the  parenthesized  expression
+     evaluates to true.
+       ! - This is the unary operator.  It evaluates to  true  if
+     the expression is false.
+       expression -
+     expression - The operator is the logical operator.  As it is
+     implied  by the juxtaposition of two expressions it does not
+     have to be specified.  The expression evaluates to  true  if
+     both  expressions  are  true.   The second expression is not
+     evaluated if the first expression is false.
+       expression - The operator is the  logical  operator.   The
+     expression  evaluates  to  true  if  either the first or the
+     second expression is true.  The  second  expression  is  not
+     evaluated if the first expression is true.
+  All operands and primaries must be separate arguments  to  find
+Primaries which themselves take arguments expect each argument to
+be a separate argument to find
+EXAMPLES
+
+  The following examples are shown as given to the shell:
+     find  /  \!  -name  *.c  -print - Print out a  list  of  all
+     the files whose names do not end in ``.c''.
+     find  /  -newer  ttt  -user  wnj  -print - Print out a  list
+     of  all  the files owned by user ``wnj'' that are newer than
+     the file ``ttt''.
+     find  /  \!  \(  -newer  ttt  -user  wnj  \)  -print - Print
+     out  a  list  of all the files which are not both newer than
+     ``ttt'' and owned by ``wnj''.
+     find  /  \(  -newer  ttt  -or  -user wnj  \)  -print - Print
+     out a list of all the files that are either owned by ``wnj''
+     or that are newer than ``ttt''.
+SEE ALSO
+
+  chmod (1) , sh (1) , test (1) , stat (2) , umask (2) , getpwent
+(3) , getgrent (3) , strmode (3)
+STANDARDS
+
+  The find utility syntax is a superset of the  syntax  specified
+by the standard.
+  The and options and the and primaries are extensions to
+  Historically, the and options were implemented using  the  pri-
+maries  ``-depth'',  ``-follow'', and ``-xdev''.  These primaries
+always evaluated to true.  As they were really  global  variables
+that  took  effect before the traversal began, some legal expres-
+sions could have unexpected results.  An example is  the  expres-
+sion  ``-print  -o -depth''.  As -print always evaluates to true,
+the standard order of evaluation implies that -depth would  never
+be evaluated.  This is not the case.
+  The operator ``-or'' was implemented as ``-o'', and the  opera-
+tor ``-and'' was implemented as ``-a''.
+  Historic implementations of the and primaries did  not  replace
+the string ``{}'' in the utility name or the utility arguments if
+it had preceding or following  non-whitespace  characters.   This
+version  replaces it no matter where in the utility name or argu-
+ments it appears.
+BUGS
+
+  The special characters used by find are also special characters
+to  many  shell  programs.   In particular, the characters ``*'',
+``['', ``]'', ``?'', ``('', ``)'', ``!'',  ``\''  and  ``;''  may
+have to be escaped from the shell.
+  As there is no delimiter separating options and file  names  or
+file  names and the expression , it is difficult to specify files
+named ``-xdev'' or ``!''.  These problems are handled by the  op-
+tion and the getopt (3) ``--'' construct.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

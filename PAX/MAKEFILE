@@ -1,0 +1,37 @@
+!include <ntwin32.mak>
+
+C_DEFINES=-DWIN_NT -DSTDC_HEADERS -D_POSIX_SOURCE -DDIRENT -DSTACK_DIRECTION=-1 -DMSS -D__STDC__ -D_POSIX_ -Dmajor -DCONVERT_TO_SLASHES -UCONVERT_TO_BACKSLASHES
+C_INCLUDES=-I..\include\bsd -I..\include\df
+
+all: pax.exe
+
+..\bsdpsx\bsdpsx.lib:
+	cd ..\bsdpsx
+	nmake
+	cd ..\pax
+
+pax.obj: pax.c *.h
+
+append.obj: append.c *.h
+
+buffer.obj: buffer.c *.h
+
+cpio.obj: cpio.c *.h
+
+create.obj: create.c *.h
+
+extract.obj: extract.c *.h
+
+fileio.obj: fileio.c *.h
+
+getopt.obj: getopt.c *.h
+
+link.obj: link.c *.h
+
+\.obj: \.c *.h
+
+pax.exe: pax.obj append.obj buffer.obj cpio.obj create.obj extract.obj fileio.obj getopt.obj link.obj \.obj ..\bsdpsx\bsdpsx.lib
+	$(link) $(linkdebug) $(psxflags) -out:$*.exe $** $(psxlibs) ..\bsdpsx\bsdpsx.lib
+
+.c.obj:
+	$(cc) $(cflags) $(psxvars) $(cvars) $(cdebug) $(C_DEFINES) $(C_INCLUDES) $*.c
